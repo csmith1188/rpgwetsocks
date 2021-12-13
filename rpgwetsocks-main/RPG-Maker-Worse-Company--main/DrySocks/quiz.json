@@ -1,0 +1,21 @@
+{
+    "challenges": [{
+            "id": 0,
+            "question": "What is the square root of a piece of pi?",
+            "answers": ["Banana", "What?", "42", "Pie"],
+            "answer_index": 2
+        },
+        {
+            "id": 1,
+            "question": "Exactly how many ways are there to skin a cat?",
+            "answers": ["Only 2", "42", "7", "8 if you include that one way..."],
+            "answer_index": 0
+        },
+        {
+            "id": 2,
+            "question": "Yes.",
+            "answers": ["No?", "?", "...", "You're scaring me"],
+            "answer_index": 3
+        }
+    ]
+}
