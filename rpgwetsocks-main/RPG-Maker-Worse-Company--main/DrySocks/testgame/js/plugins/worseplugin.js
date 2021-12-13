@@ -61,6 +61,14 @@
         $gameMessage.add('Dylan has been received');
         $gameParty.gainItem($dataItems[5], 4);
         break;
+        case 'Send':
+        ws.send('cwimge')
+        ws.onmessage = function(message) {
+          $gameMessage.setBackground(1)
+          $gameMessage.add('Dylan has been received');
+          $gameParty.gainItem($dataItems[5], 4);
+        }
+        break;
       default:
         break;
     }

@@ -42,6 +42,8 @@ wss.on('connection', function connection(ws, req) {
 		delete clients[ws.id];
 	})
 
+
+ws.send(`Hey there ${ws.id}`)
 });
 
 // setInterval(function() {
