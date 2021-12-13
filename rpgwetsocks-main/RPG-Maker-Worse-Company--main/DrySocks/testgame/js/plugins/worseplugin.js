@@ -69,6 +69,16 @@
           $gameParty.gainItem($dataItems[5], 4);
         }
         break;
+        case 'Conditional':
+        ws.send('.')
+        ws.onmessage = function(message) {
+          if($gameParty.numItems($dataItems[5])>0){
+            $gameMessage.add('You have a Dylan, please take care of it');
+          } else {
+            $gameMessage.add('NO DYLAN???? FINE D I E')
+            SceneManager.goto(Scene_Gameover);
+          }
+        }
       default:
         break;
     }

@@ -31,6 +31,14 @@ wss.on('connection', function connection(ws, req) {
 		console.log(`Connection refused: Server is full.`);
 	}
 
+	function broadcast(clientsList, data) {
+		for (const client in clientsList) {
+			clientsList[client].send(data);
+		}
+	}
+	ws.onmessage = function(message){
+		broadcast(clients, message)
+	}
 
 	ws.on('message', function incoming(message) {
 		console.log(message);
@@ -59,11 +67,7 @@ ws.send(`Hey there ${ws.id}`)
 // 	}
 // }, 16);
 
-function broadcast(clientsList, data) {
-	for (const client in clientsList) {
-		clientsList[client].send(data);
-	}
-}
+
 
 function packData(type, to, from, content) {
 	return {
