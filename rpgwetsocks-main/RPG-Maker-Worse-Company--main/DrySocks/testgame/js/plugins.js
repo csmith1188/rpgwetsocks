@@ -5,5 +5,5 @@ var $plugins =
 {"name":"Community_Basic","status":true,"description":"Basic plugin for manipulating important parameters.","parameters":{"cacheLimit":"20","screenWidth":"816","screenHeight":"624","changeWindowWidthTo":"","changeWindowHeightTo":"","renderingMode":"auto","alwaysDash":"off"}},
 {"name":"Formbar","status":true,"description":"Formbar Plugin","parameters":{"Remote Address":"172.21.3.4","Remote Port":"5000","Recheck Flag Switch":"1","Boss HP Variable":"1"}},
 {"name":"Wetsock","status":false,"description":"Websockets Bossfight Plugin","parameters":{"Remote Address":"localhost","Remote Port":"81","Host":"true","Variable Block":"2"}},
-{"name":"worseplugin","status":true,"description":"Websockets Bossfight Plugin","parameters":{"Remote Address":"localhost","Remote Port":"81","Host":"true","Variable Block":"21"}}
+{"name":"worseplugin","status":true,"description":"Websockets Bossfight Plugin","parameters":{"Remote Address":"192.168.10.65","Remote Port":"81","Host":"false","Variable Block":"21"}}
 ];
