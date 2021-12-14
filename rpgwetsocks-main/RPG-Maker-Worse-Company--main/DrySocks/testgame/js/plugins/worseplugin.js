@@ -79,6 +79,15 @@
             SceneManager.goto(Scene_Gameover);
           }
         }
+        break;
+        case 'Ping':
+        ws.send('Ping')
+        break;
+        case 'Pong':
+        ws.onmessage = function(message) {
+          $gameMessage.add('Pong');
+        }
+        break;
       default:
         break;
     }
