@@ -85,7 +85,9 @@
         break;
         case 'Pong':
         ws.onmessage = function(message) {
-          $gameMessage.add('Pong');
+          if (message == 'Ping') {
+            $gameMessage.add('Pong');
+          }
         }
         break;
       default:
