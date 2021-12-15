@@ -61,8 +61,12 @@
         $gameMessage.add('Dylan has been received');
         $gameParty.gainItem($dataItems[5], 4);
         break;
+        case 'Ping':
+        ws.send('Ping')
+        break;
       default:
         break;
+
     }
   }
 
