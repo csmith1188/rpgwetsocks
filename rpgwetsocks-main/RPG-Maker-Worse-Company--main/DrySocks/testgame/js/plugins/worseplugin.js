@@ -64,11 +64,35 @@
         case 'testMessageA':
         ws.send("If you can read this, Riley is cringelord 100");
         ws.onmessage = function(message) {
-          $gameMessage.add('if you can read this, riley is cringelord 100000000000')
+          $gameMessage.setBackground(1)
+          $gameMessage.add('Dylan has been received');
+          $gameParty.gainItem($dataItems[5], 4);
+        }
+        break;
+        case 'Conditional':
+        ws.send('.')
+        ws.onmessage = function(message) {
+          if($gameParty.numItems($dataItems[5])>0){
+            $gameMessage.add('You have a Dylan, please take care of it');
+          } else {
+            $gameMessage.add('NO DYLAN???? FINE D I E')
+            SceneManager.goto(Scene_Gameover);
+          }
+        }
+        break;
+        case 'Ping':
+        ws.send('Ping')
+        break;
+        case 'Pong':
+        ws.onmessage = function(message) {
+          if (message == 'Ping') {
+            $gameMessage.add('Pong');
+          }
         }
         break;
       default:
         break;
+
     }
   }
 
