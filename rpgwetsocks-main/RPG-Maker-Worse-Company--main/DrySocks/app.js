@@ -42,6 +42,7 @@ wss.on('connection', function connection(ws, req) {
 		delete clients[ws.id];
 	})
 
+
 });
 
 // setInterval(function() {
@@ -56,6 +57,8 @@ wss.on('connection', function connection(ws, req) {
 // 		broadcast(clients, packData('location', null, 'server', content));
 // 	}
 // }, 16);
+
+
 
 function broadcast(clientsList, data) {
 	for (const client in clientsList) {
