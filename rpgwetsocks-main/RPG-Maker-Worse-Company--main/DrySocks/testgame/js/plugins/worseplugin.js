@@ -61,8 +61,8 @@
         $gameMessage.add('Dylan has been received');
         $gameParty.gainItem($dataItems[5], 4);
         break;
-        case 'Send':
-        ws.send('cwimge')
+        case 'testMessageA':
+        ws.send("If you can read this, Riley is cringelord 100");
         ws.onmessage = function(message) {
           $gameMessage.setBackground(1)
           $gameMessage.add('Dylan has been received');
